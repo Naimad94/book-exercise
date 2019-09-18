@@ -43,4 +43,10 @@ public class Book
         System.out.println("Title: " + title);
     }
     
+    //** desplays the detail of the book.*/
+    public void printDetails()
+    {
+        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+    }
+    
 }
