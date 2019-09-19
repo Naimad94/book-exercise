@@ -1,4 +1,5 @@
 
+
  /**A class that maintains information on a book.
  * This might form part of a larger application such
  * as a library system, for instance.
@@ -27,7 +28,7 @@ public class Book
     }
     
     //** Refrence number for the book.
-    public String getrefNumber()
+    public String getRefNumber()
     {
         return refNumber;
     }
@@ -57,7 +58,7 @@ public class Book
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
         
         String refNumberString;
-        if(refNumber.length() > 0 )
+        if(refNumber.length() > 0)
         {
            refNumberString = refNumber;
         }
@@ -66,5 +67,17 @@ public class Book
            refNumberString = "ZZZ";
         }
         System.out.println("Refrence number: " + refNumberString);
+    }
+    
+    public void setRefNumber(String ref)
+    {
+        if(ref.length() > 3)
+        {
+            refNumber = ref;
+        }
+        else
+        {
+            System.out.println("Error:Leave the field");
+        }
     }
 }
