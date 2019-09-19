@@ -23,10 +23,11 @@ public class Book
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        refNumber = "";
     }
     
     //** Refrence number for the book.
-    public String getRefNumber()
+    public String getrefNumber()
     {
         return refNumber;
     }
@@ -54,9 +55,16 @@ public class Book
     public void printDetails()
     {
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        
+        String refNumberString;
+        if(refNumber.length() > 0 )
+        {
+           refNumberString = refNumber;
+        }
+        else
+        {
+           refNumberString = "ZZZ";
+        }
+        System.out.println("Refrence number: " + refNumberString);
     }
-    
-    
-    
-    
 }
