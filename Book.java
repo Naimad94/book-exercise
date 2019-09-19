@@ -14,6 +14,7 @@ public class Book
     private String title;
     private String refNumber;
     private int pages;
+    private int borrowed;
     
     /**
      * Set the author and title fields when this object
@@ -52,10 +53,23 @@ public class Book
         System.out.println("Title: " + title);
     }
     
+    //** Increment the number of times the book has been borrowed.
+    public void borrowed()
+    {
+        borrowed++;
+    }
+    
+    //**Gets the number of times a books been borrowed.
+    public int getBorrowed()
+    {
+        return borrowed;
+    }
+    
     //** desplays the detail of the book.*/
     public void printDetails()
     {
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        System.out.println("Borrowed: " + borrowed);
         
         String refNumberString;
         if(refNumber.length() > 0)
