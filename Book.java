@@ -21,12 +21,23 @@ public class Book
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean courseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        this.courseText = courseText;
+    }
+    
+    public String getAuthor()
+    {
+        return author;
+    }
+    
+    public String getTitle()
+    {
+        return title;
     }
     
     //** Refrence number for the book.
@@ -45,13 +56,13 @@ public class Book
     //** displays the authors name.*/
     public void printAuthor()
     {
-        System.out.println("Author: " + author);
+        System.out.println(author);
     }
     
     //** displays the books title.*/
     public void printTitle()
     {
-        System.out.println("Title: " + title);
+        System.out.println(title);
     }
     
     //** Increment the number of times the book has been borrowed.
@@ -75,7 +86,7 @@ public class Book
     public void printDetails()
     {
         System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
-        System.out.println("Borrowed: " + borrowed);
+        System.out.println("Borrow: " + borrowed);
         
         String refNumberString;
         if(refNumber.length() > 0)

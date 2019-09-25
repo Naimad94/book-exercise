@@ -77,9 +77,9 @@ public class BookTest
     @Test
     public void isCourseText()
     {
-        assertEquals(true, book1.isCourseText());
-        assertEquals(false, book2.isCourseText());
-        assertEquals(false, book3.isCourseText());
+        assertEquals(true, book1.iscourseText());
+        assertEquals(false, book2.iscourseText());
+        assertEquals(false, book3.iscourseText());
     }
 
     @Test
@@ -93,11 +93,11 @@ public class BookTest
     @Test
     public void borrowBook()
     {
-        book1.borrow();
+        book1.borrowed();
         assertEquals(1, book1.getBorrowed());
-        book2.borrow();
-        book2.borrow();
-        book2.borrow();
+        book2.borrowed();
+        book2.borrowed();
+        book2.borrowed();
         assertEquals(3, book2.getBorrowed());
         assertEquals(0, book3.getBorrowed());
     }
